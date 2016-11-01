@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+
+@import "reset";
+@import "space";
+@import "navbar";
+
+$space: #0c0819;
+
+body {
+  background-color: $space;
+}
+
+.appTitle {
+  position: fixed;
+  width: 20vw;
+  top: 5vh;
+  left: 4vw;
+  color: white;
+  font-family: 'Unica One', cursive;
+}
+
+.nextSection {
+  color: white;
+  align-self: center;
+  position: absolute;
+  bottom: 5vh;
+  background-color: transparent;
+  border: none;
+}

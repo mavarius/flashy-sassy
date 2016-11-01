@@ -1,0 +1,49 @@
+// space
+
+@-mox-keyframes rotate { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes rotate { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.outerContainer {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.fsSection {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.fsIss, .fsAstronaut {
+  align-self: center;
+  position: absolute;
+
+}
+
+.fsIss {
+  -webkit-animation: rotate 180s linear infinite;
+  -moz-animation: rotate 180s linear infinite;
+  animation: rotate 180s linear infinite;
+}
+
+.fsAstronaut {
+  -webkit-animation: rotate 60s linear infinite;
+  -moz-animation: rotate 60s linear infinite;
+  animation: rotate 60s linear infinite;
+  width: 60vmin;
+
+  img {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.fsSun {
+  position: fixed;
+  left: 20vw;
+  top: 20vh;
+}
