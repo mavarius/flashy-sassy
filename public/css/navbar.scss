@@ -1,11 +1,11 @@
 // navbar
 
-.navBar {
+#navBar {
   position: fixed;
   background-color: black;
   width: 100vw;
   height: 50px;
-  top: 0;
+  top: -50px;
   left: 0;
   color: white;
   font-family: 'Unica One', cursive;
@@ -13,6 +13,13 @@
   display: flex;
   justify-content: space-around;
   z-index: 500;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+#navBar.open {
+  top: 0;
 }
 
 .navItems {

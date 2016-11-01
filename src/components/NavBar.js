@@ -1,18 +1,20 @@
 import React from 'react'
 
-let openClass = ''
+let openClass = 'closed'
 
 const toggleNavBar = () => {
-  if (!openClass) openClass = 'open'
-  else openClass = ''
-  console.log('openClassInside: ', openClass)
-  renderNavBar(openClass)
+  let navBar = document.getElementById('navBar')
+  if (navBar.className === 'open') navBar.className = 'closed'
+  else navBar.className = 'open'
+
+  let navBtn = document.getElementById('navBtn')
+  if (navBtn.className === 'open') navBtn.className = 'closed'
+  else navBtn.className = 'open'
 }
 
 const renderNavBar = (elClass) => {
-  console.log('elClass: ', elClass)
   return (
-    <nav className={`navBar ${elClass}`}>
+    <nav id="navBar" className={elClass}>
       <ul className="navItems">
         <li>space</li>
         <li>sky</li>
